@@ -40,8 +40,7 @@ describe('Orange HRM Test', () => {
     cy.get(selectorsList.submitSaveButton).eq(0).click();
     cy.get('body').should('contain','Successfully Updated');
     cy.get('.oxd-toast-close');
-    /*cy.get(selectorsList.genericField).eq(9).clear().type('ssnNumberTest');
-    cy.get(selectorsList.genericField).eq(10).clear().type('sinNumberTest');*/
+
  
 
   });
