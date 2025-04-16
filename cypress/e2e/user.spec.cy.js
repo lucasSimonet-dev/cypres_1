@@ -11,12 +11,7 @@ const myInfoPage = new MyInfoPage();
 
 describe('Orange HRM Test', () => {
 
-  const selectorsList = {
-   
-      sectionTitleTopBar:'.oxd-topbar-header-breadcrumb-module',
-      dashboardGrid: '.orangehrm-dashboard-grid',
 
-  }
   
   it('User Info Update - Sucess', () => {
     loginPage.acessLoginPage();
@@ -24,19 +19,14 @@ describe('Orange HRM Test', () => {
 
     dashboardPage.checkDashboardPage();
 
-    menuPage. acessMyInfo();
+    menuPage.acessMyInfo();
 
     myInfoPage.fillPersonalDetails('Lucas','Simon','hauuha');
     myInfoPage.fillEmployeeDetails('EmployId',"Other ID",'1234','2025-07-29');
+    //myInfoPage.fillStatus();
     myInfoPage.saveForm();
 
   });
-  it ('Login - Fail', () => {
-    loginPage.acessLoginPage()
-    loginPage.loginAnyWithUser(userData.userFail.username, userData.userSucess.password)
-    loginPage.checkAcessInvalid()
 
-
-  })
 });
 

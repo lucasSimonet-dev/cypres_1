@@ -10,7 +10,8 @@ class MyInfoPage {
             submitSaveButton: '[type="submit"]',
             genericComboBox: '.oxd-select-text--active',
             secondItemCombobox:'.oxd-select-dropdown > :nth-child(2)',
-            thirdItemCombobox:'.oxd-select-dropdown > :nth-child(3)'
+            thirdItemCombobox:'.oxd-select-dropdown > :nth-child(3)',
+
         }
         return selectors
     }
