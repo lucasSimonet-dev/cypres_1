@@ -23,7 +23,6 @@ describe('Orange HRM Test', () => {
 
     myInfoPage.fillPersonalDetails('Lucas','Simon','hauuha');
     myInfoPage.fillEmployeeDetails('EmployId',"Other ID",'1234','2025-07-29');
-    //myInfoPage.fillStatus();
     myInfoPage.saveForm();
 
   });

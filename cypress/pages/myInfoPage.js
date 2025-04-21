@@ -36,9 +36,6 @@ class MyInfoPage {
         cy.get('.oxd-toast-close');
     }
 
-    fillStatus() {
-
-    }
 
 }
 
