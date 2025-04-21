@@ -4,6 +4,11 @@ import LoginPage from '../pages/loginPage';
 import MenuPage from '../pages/menuPage';
 import MyInfoPage from '../pages/myInfoPage';
 
+const Chance = require('chance');
+const Moment = require('moment');
+
+const moment = new Moment();
+const chance = new Chance();
 const loginPage = new LoginPage();
 const dashboardPage = new DashboardPage();
 const menuPage = new MenuPage();
@@ -21,8 +26,12 @@ describe('Orange HRM Test', () => {
 
     menuPage.acessMyInfo();
 
-    myInfoPage.fillPersonalDetails('Lucas','Simon','hauuha');
-    myInfoPage.fillEmployeeDetails('EmployId',"Other ID",'1234','2025-07-29');
+    myInfoPage.fillPersonalDetails(chance.first(),chance.word(),chance.last());
+    myInfoPage.fillEmployeeDetails(chance.integer({ min: 100, max: 10000 }),
+    chance.integer({ min: 1000, max: 1500 }),
+    chance.integer({ min: 1800, max: 9200}),
+    moment.format('YYYY-MM-DD')
+  );
     myInfoPage.saveForm();
 
   });
